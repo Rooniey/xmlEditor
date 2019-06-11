@@ -1,0 +1,191 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified"
+           targetNamespace="http://tempuri.org/SeriesPlaylist"
+           xmlns:sp="http://tempuri.org/SeriesPlaylist">
+
+  <xs:element name="seriesPlaylists" type="sp:seriesPlaylistsType">
+    <xs:key name="key_providerID">        
+      <xs:selector xpath="./sp:providers/sp:provider"/>
+      <xs:field xpath="@provider_id"/>
+    </xs:key>
+
+    <xs:keyref name="keyref_provider" refer="sp:key_providerID">
+      <xs:selector xpath="./sp:playlists/sp:playlist/sp:positions/sp:series"/>
+      <xs:field xpath="@provider"/>
+    </xs:keyref>
+  </xs:element>
+
+  <!-- SIMPLE TYPE DEFINITIONS -->
+  <xs:simpleType name="properName">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[A-Z][a-z]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="currencyCode">
+    <xs:restriction base="xs:token">
+      <xs:length value="3"/>
+      <xs:pattern value="[A-Z]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="moneyAmount">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+      <xs:minExclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="studentIndex">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="2[0-9]{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="genre">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="superhero" />
+      <xs:enumeration value="action" />
+      <xs:enumeration value="fantasy" />
+      <xs:enumeration value="drama" />
+      <xs:enumeration value="sci-fi" />
+      <xs:enumeration value="crime" />
+      <xs:enumeration value="gangster" />
+      <xs:enumeration value="legaldrama" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="rating">
+      <xs:restriction base="xs:nonNegativeInteger">
+        <xs:maxInclusive value="100"/>
+      </xs:restriction>
+  </xs:simpleType>
+
+  <!-- COMPLEX TYPE DEFINITIONS -->
+  <xs:complexType name="seriesPlaylistsType" mixed="true">
+    <xs:sequence>
+      <xs:element type="sp:documentInfoType" name="documentInfo"/>
+      <xs:element type="sp:providersType" name="providers"/>
+      <xs:element type="sp:playlistsType" name="playlists"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- START DOCUMENT INFO -->
+  <xs:complexType name="documentInfoType">
+    <xs:sequence>
+      <xs:element type="xs:normalizedString" name="title"/>
+      <xs:element type="sp:authorsType" name="authors"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorsType">
+    <xs:sequence>
+      <xs:element type="sp:authorType" name="author" maxOccurs="2" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group name="authorPersonalData">
+    <xs:sequence>
+      <xs:element type="sp:properName" name="firstName"/>
+      <xs:element type="sp:properName" name="lastName"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="authorType">
+    <xs:sequence>
+      <xs:group ref="sp:authorPersonalData"/>
+      <xs:element type="sp:studentIndex" name="index"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- END DOCUMENT INFO -->
+
+  <!-- START PROVIDERS  -->
+  <xs:complexType name="providersType">
+    <xs:sequence>
+      <xs:element type="sp:providerType" name="provider" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="providerType">
+    <xs:sequence>
+      <xs:element type="xs:normalizedString" name="name"/>
+      <xs:element type="sp:monthlyPaymentType" name="monthlyPayment"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="provider_id" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="monthlyPaymentType">
+    <xs:sequence>
+      <xs:element type="sp:paymentType" name="payment" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="paymentType">
+    <xs:simpleContent> 
+      <xs:extension base="sp:moneyAmount">
+        <xs:attribute type="sp:currencyCode" name="currency" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!-- END PROVIDERS -->
+
+  <!-- START PLAYLISTS -->
+  <xs:complexType name="playlistsType">
+    <xs:sequence>
+      <xs:element type="sp:playlistType" name="playlist" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="playlistType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="sp:positionsType" name="positions"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="positionsType">
+    <xs:sequence>
+      <xs:element type="sp:seriesType" name="series" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="seriesType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="title"/>
+      <xs:element type="xs:positiveInteger" name="totalNumberOfEpisodes"/>
+      <xs:element type="xs:date" name="firstEpisodePremiere"/>
+      <xs:element type="sp:rottenTomatoesType" name="rottenTomatoes"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="sp:seriesAttributes"/>
+  </xs:complexType>
+
+  <xs:attributeGroup name="seriesAttributes">
+    <xs:attribute type="sp:genre" name="genre" use="optional"/>
+    <xs:attribute type="xs:string" name="provider" use="required"/>
+  </xs:attributeGroup>
+
+  <xs:complexType name="rottenTomatoesType">
+    <xs:simpleContent>
+      <xs:extension base="sp:rating">
+        <xs:attribute type="xs:string" name="unit" use="required" fixed="%"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!-- END PLAYLISTS -->
+
+</xs:schema>
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="Kupa">
+<xsd:complexType>
+<xsd:simpleContent>
+<xsd:extension base="xsd:string">
+<xsd:attribute name="currency" type="xsd:integer"/>
+</xsd:extension>
+</xsd:simpleContent>
+</xsd:complexType>
+</xsd:element>
+
+</xsd:schema>
