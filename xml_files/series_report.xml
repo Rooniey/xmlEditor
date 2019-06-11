@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SeriesReport>
+   <SeriesProviders/>
+   <Aggregations>
+      <PlaylistMeanRatings/>
+      <HighestRatedSeries/>
+      <LowestRatedSeries/>
+      <SeriesOfferedByProviders/>
+      <PlaylistEpisodeCounts/>
+      <PlaylistMonthlyCost/>
+      <ReportDate>11-06-2019</ReportDate>
+   </Aggregations>
+</SeriesReport>

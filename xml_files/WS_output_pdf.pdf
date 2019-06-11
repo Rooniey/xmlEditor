@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+   <fo:layout-master-set>
+      <fo:simple-page-master master-name="series-playlists" page-height="11in" page-width="8.5in"
+                             font-family="Arial">
+         <fo:region-body region-name="body" margin="0.7in"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master master-name="providers-series" page-height="11in" page-width="8.5in"
+                             font-family="Arial">
+         <fo:region-body region-name="body" margin="0.7in"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master master-name="playlist-cost" page-height="11in" page-width="8.5in"
+                             font-family="Arial">
+         <fo:region-body region-name="body" margin="0.7in"/>
+      </fo:simple-page-master>
+   </fo:layout-master-set>
+   <fo:page-sequence master-reference="series-playlists">
+      <fo:flow flow-name="body">
+         <fo:block text-align="left" font-weight="bold" font-size="15" background-color="#000000"
+                   color="#FFFFFF"
+                   padding-left="5"
+                   margin-bottom="10">SECTION 1 - Series playlist</fo:block>
+         <fo:block text-align="center" font-weight="bold" margin-bottom="5">"Trending"</fo:block>
+         <fo:table width="100%" border="solid 1pt #000000" font-size="9" margin-bottom="20">
+            <fo:table-header text-align="center" font-weight="bold" color="#000000">
+               <fo:table-row border="solid 1pt #000000" background-color="#B8B8B8">
+                  <fo:table-cell width="125">
+                     <fo:block>Title</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Rating</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Premiere data</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Episodes count</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block width="100">Provider name</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Provider price</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-header>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">The Umbrella Academy!</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>86</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2019-02-15</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>10</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">The Order!</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>69</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2019-03-07</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>10</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Game of Thrones!</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>94</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2011-04-17</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>67</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>HBO GO</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>19.90 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Narcos!</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>95</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2015-08-28</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>30</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Peaky Blinders!</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>95</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2013-10-17</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>24</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">The Man in The High Castle!</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>81</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2015-01-15</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>30</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Hulu</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>30.25 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">The Handmaid's Tale!</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>91</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2017-04-26</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>23</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Hulu</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>30.25 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+         <fo:block text-align="center" font-weight="bold" margin-bottom="5">"My favourite tv series"</fo:block>
+         <fo:table width="100%" border="solid 1pt #000000" font-size="9" margin-bottom="20">
+            <fo:table-header text-align="center" font-weight="bold" color="#000000">
+               <fo:table-row border="solid 1pt #000000" background-color="#B8B8B8">
+                  <fo:table-cell width="125">
+                     <fo:block>Title</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Rating</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Premiere data</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Episodes count</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block width="100">Provider name</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Provider price</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-header>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Future Man</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>82</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2017-11-14</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>26</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Hulu</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>30.25 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">True Detective</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>78</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2014-01-12</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>24</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>HBO GO</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>19.90 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Westworld</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>86</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2016-10-02</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>20</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>HBO GO</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>19.90 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Taboo</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>77</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2017-01-07</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>8</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>HBO GO</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>19.90 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">The Sopranos</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>92</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>1999-01-10</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>86</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>HBO GO</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>19.90 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Luther</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>90</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2010-05-04</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>20</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>HBO GO</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>19.90 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Goliath</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>82</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2016-10-13</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>16</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Amazon Prime Video</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>31.20 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+         <fo:block text-align="center" font-weight="bold" margin-bottom="5">"Netflix freaks' playlist"</fo:block>
+         <fo:table width="100%" border="solid 1pt #000000" font-size="9" margin-bottom="20">
+            <fo:table-header text-align="center" font-weight="bold" color="#000000">
+               <fo:table-row border="solid 1pt #000000" background-color="#B8B8B8">
+                  <fo:table-cell width="125">
+                     <fo:block>Title</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Rating</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Premiere data</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Episodes count</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block width="100">Provider name</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Provider price</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-header>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Stranger Things</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>95</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2016-06-15</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>17</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Mindhunter</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>97</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2017-10-13</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>10</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Dark</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>88</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2017-12-01</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>10</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">13 Reasons Why</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>52</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2017-03-31</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>26</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center" height="25">
+                  <fo:table-cell display-align="center">
+                     <fo:block margin-left="5" text-align="left">Sense8</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>84</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>2015-06-05</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>22</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>Netflix</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell display-align="center">
+                     <fo:block>43.00 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence master-reference="providers-series">
+      <fo:flow flow-name="body">
+         <fo:block text-align="left" font-weight="bold" font-size="15" background-color="#000000"
+                   color="#FFFFFF"
+                   padding-left="5"
+                   margin-bottom="10">SECTION 2 - AGGREGATIONS</fo:block>
+         <fo:block text-align="left" font-weight="bold" font-size="15" background-color="#000000"
+                   color="#FFFFFF"
+                   padding-left="5"
+                   margin-bottom="10">2.1 - Playlist monthly cost</fo:block>
+         <fo:table width="90%" margin-left="5%" border="solid 1pt #000000" font-size="9"
+                   margin-bottom="20">
+            <fo:table-header text-align="center" font-weight="bold" color="#000000"
+                             background-color="#B8B8B8">
+               <fo:table-row border="solid 1pt #000000">
+                  <fo:table-cell min-width="200">
+                     <fo:block>Playlist name</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Raw cost</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Tax value</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-header>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>Trending</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>93.1 PLN</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>21.4 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>My favourite tv series</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>81.3 PLN</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>18.7 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>Netflix freaks' playlist</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>43 PLN</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>9.89 PLN</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+         <fo:block text-align="left" font-weight="bold" font-size="15" background-color="#000000"
+                   color="#FFFFFF"
+                   padding-left="5"
+                   margin-bottom="10">2.2 - Playlists episodes count</fo:block>
+         <fo:table width="90%" margin-left="5%" border="solid 1pt #000000" font-size="9"
+                   margin-bottom="20">
+            <fo:table-header text-align="center" font-weight="bold" color="#000000"
+                             background-color="#B8B8B8">
+               <fo:table-row border="solid 1pt #000000">
+                  <fo:table-cell min-width="250">
+                     <fo:block>Playlist name</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block width="50">Episodes count</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-header>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>Trending</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>194</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>My favourite tv series</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>200</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>Netflix freaks' playlist</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>85</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+         <fo:block text-align="left" font-weight="bold" font-size="15" background-color="#000000"
+                   color="#FFFFFF"
+                   padding-left="5"
+                   margin-bottom="10">2.2 - Playlists mean rating</fo:block>
+         <fo:table width="90%" margin-left="5%" border="solid 1pt #000000" font-size="9"
+                   margin-bottom="20">
+            <fo:table-header text-align="center" font-weight="bold" color="#000000"
+                             background-color="#B8B8B8">
+               <fo:table-row border="solid 1pt #000000">
+                  <fo:table-cell max-width="30">
+                     <fo:block>Position</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell min-width="250">
+                     <fo:block>Playlist name</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block width="50">Average rating</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-header>
+            <fo:table-body>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>1</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Trending</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>87.28</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>2</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>My favourite tv series</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>83.85</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+               <fo:table-row border="solid 1pt #000000" color="#000000" text-align="center">
+                  <fo:table-cell>
+                     <fo:block>3</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>Netflix freaks' playlist</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block>83.2</fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+         <fo:block text-align="left" font-weight="bold" font-size="15" background-color="#000000"
+                   color="#FFFFFF"
+                   padding-left="5"
+                   margin-bottom="10">2.2 - Highest and lowest rated series</fo:block>
+         <fo:block>Highest rated: "Mindhunter" with 97 rating</fo:block>
+         <fo:block>Lowest rated: "13 Reasons Why" with 52 rating</fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence master-reference="playlist-cost">
+      <fo:flow flow-name="body">
+         <fo:block text-align="left" font-weight="bold" font-size="15" background-color="#000000"
+                   color="#FFFFFF"
+                   padding-left="5"
+                   margin-bottom="10">SECTION 3 - Series divided by providers</fo:block>
+         <fo:block text-align="center" font-weight="bold" font-size="15" color="#000000"
+                   margin-top="15">Netflix</fo:block>
+         <fo:list-block margin-left="50">
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>1.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">The Umbrella Academy</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>2.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">The Order</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>3.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Narcos</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>4.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Peaky Blinders</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>5.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Stranger Things</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>6.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Mindhunter</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>7.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Dark</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>8.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">13 Reasons Why</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>9.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Sense8</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block text-align="center" font-weight="bold" font-size="15" color="#000000"
+                   margin-top="15">HBO GO</fo:block>
+         <fo:list-block margin-left="50">
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>1.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Game of Thrones</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>2.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">True Detective</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>3.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Westworld</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>4.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Taboo</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>5.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">The Sopranos</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>6.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Luther</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block text-align="center" font-weight="bold" font-size="15" color="#000000"
+                   margin-top="15">Hulu</fo:block>
+         <fo:list-block margin-left="50">
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>1.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">The Man in The High Castle</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>2.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">The Handmaid's Tale</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>3.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Future Man</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block text-align="center" font-weight="bold" font-size="15" color="#000000"
+                   margin-top="15">Amazon Prime Video</fo:block>
+         <fo:list-block margin-left="50">
+            <fo:list-item>
+               <fo:list-item-label>
+                  <fo:block>1.</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body>
+                  <fo:block margin-left="15">Goliath</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+      </fo:flow>
+   </fo:page-sequence>
+</fo:root>

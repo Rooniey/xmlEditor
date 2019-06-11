@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SeriesReport>
+   <SeriesProviders>
+      <Playlist title="Trending">
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>The Umbrella Academy!</Title>
+            <Rating unit="%">86</Rating>
+            <EpisodesCount>10</EpisodesCount>
+            <PremiereDate>2019-02-15</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>The Order!</Title>
+            <Rating unit="%">69</Rating>
+            <EpisodesCount>10</EpisodesCount>
+            <PremiereDate>2019-03-07</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>HBO GO</Name>
+               <Price currency="PLN">19.90</Price>
+            </Provider>
+            <Title>Game of Thrones!</Title>
+            <Rating unit="%">94</Rating>
+            <EpisodesCount>67</EpisodesCount>
+            <PremiereDate>2011-04-17</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>Narcos!</Title>
+            <Rating unit="%">95</Rating>
+            <EpisodesCount>30</EpisodesCount>
+            <PremiereDate>2015-08-28</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>Peaky Blinders!</Title>
+            <Rating unit="%">95</Rating>
+            <EpisodesCount>24</EpisodesCount>
+            <PremiereDate>2013-10-17</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Hulu</Name>
+               <Price currency="PLN">30.25</Price>
+            </Provider>
+            <Title>The Man in The High Castle!</Title>
+            <Rating unit="%">81</Rating>
+            <EpisodesCount>30</EpisodesCount>
+            <PremiereDate>2015-01-15</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Hulu</Name>
+               <Price currency="PLN">30.25</Price>
+            </Provider>
+            <Title>The Handmaid's Tale!</Title>
+            <Rating unit="%">91</Rating>
+            <EpisodesCount>23</EpisodesCount>
+            <PremiereDate>2017-04-26</PremiereDate>
+         </Series>
+      </Playlist>
+      <Playlist title="My favourite tv series">
+         <Series>
+            <Provider>
+               <Name>Hulu</Name>
+               <Price currency="PLN">30.25</Price>
+            </Provider>
+            <Title>Future Man</Title>
+            <Rating unit="%">82</Rating>
+            <EpisodesCount>26</EpisodesCount>
+            <PremiereDate>2017-11-14</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>HBO GO</Name>
+               <Price currency="PLN">19.90</Price>
+            </Provider>
+            <Title>True Detective</Title>
+            <Rating unit="%">78</Rating>
+            <EpisodesCount>24</EpisodesCount>
+            <PremiereDate>2014-01-12</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>HBO GO</Name>
+               <Price currency="PLN">19.90</Price>
+            </Provider>
+            <Title>Westworld</Title>
+            <Rating unit="%">86</Rating>
+            <EpisodesCount>20</EpisodesCount>
+            <PremiereDate>2016-10-02</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>HBO GO</Name>
+               <Price currency="PLN">19.90</Price>
+            </Provider>
+            <Title>Taboo</Title>
+            <Rating unit="%">77</Rating>
+            <EpisodesCount>8</EpisodesCount>
+            <PremiereDate>2017-01-07</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>HBO GO</Name>
+               <Price currency="PLN">19.90</Price>
+            </Provider>
+            <Title>The Sopranos</Title>
+            <Rating unit="%">92</Rating>
+            <EpisodesCount>86</EpisodesCount>
+            <PremiereDate>1999-01-10</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>HBO GO</Name>
+               <Price currency="PLN">19.90</Price>
+            </Provider>
+            <Title>Luther</Title>
+            <Rating unit="%">90</Rating>
+            <EpisodesCount>20</EpisodesCount>
+            <PremiereDate>2010-05-04</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Amazon Prime Video</Name>
+               <Price currency="PLN">31.20</Price>
+            </Provider>
+            <Title>Goliath</Title>
+            <Rating unit="%">82</Rating>
+            <EpisodesCount>16</EpisodesCount>
+            <PremiereDate>2016-10-13</PremiereDate>
+         </Series>
+      </Playlist>
+      <Playlist title="Netflix freaks' playlist">
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>Stranger Things</Title>
+            <Rating unit="%">95</Rating>
+            <EpisodesCount>17</EpisodesCount>
+            <PremiereDate>2016-06-15</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>Mindhunter</Title>
+            <Rating unit="%">97</Rating>
+            <EpisodesCount>10</EpisodesCount>
+            <PremiereDate>2017-10-13</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>Dark</Title>
+            <Rating unit="%">88</Rating>
+            <EpisodesCount>10</EpisodesCount>
+            <PremiereDate>2017-12-01</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>13 Reasons Why</Title>
+            <Rating unit="%">52</Rating>
+            <EpisodesCount>26</EpisodesCount>
+            <PremiereDate>2017-03-31</PremiereDate>
+         </Series>
+         <Series>
+            <Provider>
+               <Name>Netflix</Name>
+               <Price currency="PLN">43.00</Price>
+            </Provider>
+            <Title>Sense8</Title>
+            <Rating unit="%">84</Rating>
+            <EpisodesCount>22</EpisodesCount>
+            <PremiereDate>2015-06-05</PremiereDate>
+         </Series>
+      </Playlist>
+   </SeriesProviders>
+   <Aggregations>
+      <PlaylistMeanRatings>
+         <MeanRating name="Trending">87.29</MeanRating>
+         <MeanRating name="My favourite tv series">83.86</MeanRating>
+         <MeanRating name="Netflix freaks' playlist">83.2</MeanRating>
+      </PlaylistMeanRatings>
+      <HighestRatedSeries>
+         <title>Mindhunter</title>
+         <rating>97</rating>
+      </HighestRatedSeries>
+      <LowestRatedSeries>
+         <title>13 Reasons Why</title>
+         <rating>52</rating>
+      </LowestRatedSeries>
+      <SeriesOfferedByProviders>
+         <ProviderSeries name="Netflix">
+            <offeredSeries>The Umbrella Academy</offeredSeries>
+            <offeredSeries>The Order</offeredSeries>
+            <offeredSeries>Narcos</offeredSeries>
+            <offeredSeries>Peaky Blinders</offeredSeries>
+            <offeredSeries>Stranger Things</offeredSeries>
+            <offeredSeries>Mindhunter</offeredSeries>
+            <offeredSeries>Dark</offeredSeries>
+            <offeredSeries>13 Reasons Why</offeredSeries>
+            <offeredSeries>Sense8</offeredSeries>
+         </ProviderSeries>
+         <ProviderSeries name="HBO GO">
+            <offeredSeries>Game of Thrones</offeredSeries>
+            <offeredSeries>True Detective</offeredSeries>
+            <offeredSeries>Westworld</offeredSeries>
+            <offeredSeries>Taboo</offeredSeries>
+            <offeredSeries>The Sopranos</offeredSeries>
+            <offeredSeries>Luther</offeredSeries>
+         </ProviderSeries>
+         <ProviderSeries name="Hulu">
+            <offeredSeries>The Man in The High Castle</offeredSeries>
+            <offeredSeries>The Handmaid's Tale</offeredSeries>
+            <offeredSeries>Future Man</offeredSeries>
+         </ProviderSeries>
+         <ProviderSeries name="Amazon Prime Video">
+            <offeredSeries>Goliath</offeredSeries>
+         </ProviderSeries>
+      </SeriesOfferedByProviders>
+      <PlaylistEpisodeCounts>
+         <PlaylistEpisodeCount name="Trending">194</PlaylistEpisodeCount>
+         <PlaylistEpisodeCount name="My favourite tv series">200</PlaylistEpisodeCount>
+         <PlaylistEpisodeCount name="Netflix freaks' playlist">85</PlaylistEpisodeCount>
+      </PlaylistEpisodeCounts>
+      <PlaylistMonthlyCost>
+         <MonthlyCost name="Trending">
+            <cost currency="PLN">
+               <rawCost>93.1</rawCost>
+               <taxValue>21.4</taxValue>
+            </cost>
+         </MonthlyCost>
+         <MonthlyCost name="My favourite tv series">
+            <cost currency="PLN">
+               <rawCost>81.3</rawCost>
+               <taxValue>18.7</taxValue>
+            </cost>
+         </MonthlyCost>
+         <MonthlyCost name="Netflix freaks' playlist">
+            <cost currency="PLN">
+               <rawCost>43</rawCost>
+               <taxValue>9.89</taxValue>
+            </cost>
+         </MonthlyCost>
+      </PlaylistMonthlyCost>
+      <ReportDate>11-06-2019</ReportDate>
+   </Aggregations>
+</SeriesReport>

@@ -1,0 +1,98 @@
+Series playlists
+
+Playlist name: "Trending"
+|            TITLE            | RATING | EPISODES |  PREMIERE  |   PROVIDER   | PROVIDER COST |
+-----------------------------------------------------------------------------------------------
+| The Umbrella Academy!       | 86%    | 10       | 2019-02-15 | Netflix      | 43.00 PLN     |
+| The Order!                  | 69%    | 10       | 2019-03-07 | Netflix      | 43.00 PLN     |
+| Game of Thrones!            | 94%    | 67       | 2011-04-17 | HBO GO       | 19.90 PLN     |
+| Narcos!                     | 95%    | 30       | 2015-08-28 | Netflix      | 43.00 PLN     |
+| Peaky Blinders!             | 95%    | 24       | 2013-10-17 | Netflix      | 43.00 PLN     |
+| The Man in The High Castle! | 81%    | 30       | 2015-01-15 | Hulu         | 30.25 PLN     |
+| The Handmaid's Tale!        | 91%    | 23       | 2017-04-26 | Hulu         | 30.25 PLN     |
+
+Playlist name: "My favourite tv series"
+|            TITLE            | RATING | EPISODES |  PREMIERE  |   PROVIDER   | PROVIDER COST |
+-----------------------------------------------------------------------------------------------
+| Future Man                  | 82%    | 26       | 2017-11-14 | Hulu         | 30.25 PLN     |
+| True Detective              | 78%    | 24       | 2014-01-12 | HBO GO       | 19.90 PLN     |
+| Westworld                   | 86%    | 20       | 2016-10-02 | HBO GO       | 19.90 PLN     |
+| Taboo                       | 77%    | 8        | 2017-01-07 | HBO GO       | 19.90 PLN     |
+| The Sopranos                | 92%    | 86       | 1999-01-10 | HBO GO       | 19.90 PLN     |
+| Luther                      | 90%    | 20       | 2010-05-04 | HBO GO       | 19.90 PLN     |
+| Goliath                     | 82%    | 16       | 2016-10-13 | Amazon Prime | 31.20 PLN     |
+
+Playlist name: "Netflix freaks' playlist"
+|            TITLE            | RATING | EPISODES |  PREMIERE  |   PROVIDER   | PROVIDER COST |
+-----------------------------------------------------------------------------------------------
+| Stranger Things             | 95%    | 17       | 2016-06-15 | Netflix      | 43.00 PLN     |
+| Mindhunter                  | 97%    | 10       | 2017-10-13 | Netflix      | 43.00 PLN     |
+| Dark                        | 88%    | 10       | 2017-12-01 | Netflix      | 43.00 PLN     |
+| 13 Reasons Why              | 52%    | 26       | 2017-03-31 | Netflix      | 43.00 PLN     |
+| Sense8                      | 84%    | 22       | 2015-06-05 | Netflix      | 43.00 PLN     |
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Playlists monthly cost
+|      PLAYLIST NAME      | RAW COST | TAX VALUE |
+--------------------------------------------------
+| Trending                | 93.1 PLN | 21.4 PLN  |
+| My favourite tv series  | 81.3 PLN | 18.7 PLN  |
+| Netflix freaks' playlis | 43 PLN   | 9.89 PLN  |
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Playlists episodes count
+|      PLAYLIST NAME      | EPISODES COUNT |
+--------------------------------------------
+| Trending                | 194            |
+| My favourite tv series  | 200            |
+| Netflix freaks' playlis | 85             |
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Playlists ordered by mean ratings descending
+| POSITION |      PLAYLIST NAME      | MEAN RATING |
+----------------------------------------------------
+| 1        | Trending                | 87.28       |
+| 2        | My favourite tv series  | 83.85       |
+| 3        | Netflix freaks' playlis | 83.2        |
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Highest and Lowest rating series
+Highest rated series: Mindhunter with 97 rating
+Lowest rated series: 13 Reasons Why with 52 rating
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Providers
+
+Provider name: Netflix
+- The Umbrella Academy
+- The Order
+- Narcos
+- Peaky Blinders
+- Stranger Things
+- Mindhunter
+- Dark
+- 13 Reasons Why
+- Sense8
+
+Provider name: HBO GO
+- Game of Thrones
+- True Detective
+- Westworld
+- Taboo
+- The Sopranos
+- Luther
+
+Provider name: Hulu
+- The Man in The High Castle
+- The Handmaid's Tale
+- Future Man
+
+Provider name: Amazon Prime Video
+- Goliath
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
