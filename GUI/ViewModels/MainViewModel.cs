@@ -2,6 +2,7 @@
 using GUI.ViewUtility;
 using System;
 using System.IO;
+using System.Text;
 using XmlFileModel;
 using XmlFileModel.Utility;
 
@@ -11,6 +12,7 @@ namespace GUI.ViewModels
     {
 
         private object _chosenViewModel;
+        private string _readXmlFilePath;
         public object ChosenViewModel
         {
             get => _chosenViewModel;
@@ -34,7 +36,7 @@ namespace GUI.ViewModels
                 (_) => ReadXmlFile());
 
             WriteXml = new RelayCommand(
-                (_) => SaveXmlFile(),
+                (mode) => SaveXmlFile((string)mode),
                 (_) => _document != null);
 
             GenerateReport = new RelayCommand(
@@ -62,7 +64,7 @@ namespace GUI.ViewModels
         {
             string xmlFilePath = FileSystemHelper.GetXmlFilePath();
             if (string.IsNullOrEmpty(xmlFilePath) || !File.Exists(xmlFilePath)) return;
-
+            _readXmlFilePath = xmlFilePath;
             try
             {
                 ValidationResult valRes = XMLValidator.Validate(xmlFilePath);
@@ -82,13 +84,44 @@ namespace GUI.ViewModels
             }
         }
 
-        public void SaveXmlFile()
+        public void SaveXmlFile(string mode)
         {
             Console.WriteLine("Saving to file");
+
+            string saveFileName = mode == "SAVEAS" ? FileSystemHelper.GetXmlSaveFilePath() : _readXmlFilePath;
+
+            if (string.IsNullOrEmpty(saveFileName)) return;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                XMLSerializer.Serialize(_document, ms);
+
+                var str = Encoding.ASCII.GetString(ms.ToArray());
+
+                ValidationResult valRes = XMLValidator.ValidateString(str);
+
+                if (!valRes.IsValid)
+                {
+                    Messager.DisplayValidationErrors(valRes.Errors);
+                    return;
+                }
+
+                using (FileStream fs = new FileStream(saveFileName, FileMode.Create))
+                {
+                    ms.WriteTo(fs);
+                }
+            }
+            
         }
 
         public void GenerateSpecificTypeReport(string type)
         {
+            string fileName = FileSystemHelper.GetSaveFilePath();
+
+            if (String.IsNullOrEmpty(fileName)) return;
+
+            XMLTransformer transformer = new XMLTransformer(_readXmlFilePath);
+            transformer.Transform($"{fileName}.{type.ToLowerInvariant()}", type == "TXT" ? XsltOutputType.Txt : XsltOutputType.Svg);
             Console.WriteLine($"Generating report with extension {type}");
         }
     }

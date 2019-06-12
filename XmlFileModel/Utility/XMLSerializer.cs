@@ -14,5 +14,11 @@ namespace XmlFileModel.Utility
                 return (Document)serializer.Deserialize(sr);
             }
         }
+
+        public static void Serialize(Document xmlDocument, Stream outputStream)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Document));
+            serializer.Serialize(outputStream, xmlDocument);
+        }
     }
 }

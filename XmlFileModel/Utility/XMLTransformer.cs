@@ -33,6 +33,12 @@ namespace XmlFileModel.Utility
             InitReport();
         }
 
+        public XMLTransformer(string xmlFilePath)
+        {
+            XmlFilePath = xmlFilePath;
+            InitReport(xmlFilePath, XmlReportFilePath);
+        }
+
         public void InitReport()
         {
             Transform(XmlFilePath, XmlReportFilePath, XsltOutputType.Report);

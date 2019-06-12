@@ -47,8 +47,18 @@
                 </MenuItem>
 
                 <MenuItem
+                    Header="Save" 
+                    Command="{Binding WriteXml}"
+                    CommandParameter="OVERWRITE">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentSave"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem
                     Header="Save as.." 
-                    Command="{Binding WriteXml}">
+                    Command="{Binding WriteXml}"
+                    CommandParameter="SAVEAS">
                     <MenuItem.Icon>
                         <materialDesign:PackIcon Kind="ContentSave"/>
                     </MenuItem.Icon>
