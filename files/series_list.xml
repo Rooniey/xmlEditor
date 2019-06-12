@@ -13,6 +13,11 @@
 				<lastName>Pilcicki</lastName>
                 <index>210291</index>
 			</author>
+			<author>
+				<firstName>Krzysztof</firstName> 
+				<lastName>Pilcicki</lastName>
+                <index>210291</index>
+			</author>
         </authors>
     </documentInfo>
     <providers>
@@ -35,7 +40,7 @@
         <provider provider_id="hulu">
 			<name>Hulu</name>
 			<monthlyPayment>
-					<payment currency="PLN">30.25</payment>
+					<payment currency="PLNasa">30.25</payment>
 					<payment currency="EUR">7.10</payment>
 					<payment currency="USD">7.99</payment> 
 			</monthlyPayment>

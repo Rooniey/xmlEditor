@@ -69,11 +69,21 @@
     </ApplicationDefinition>
     <Compile Include="Base\BindableBase.cs" />
     <Compile Include="Base\RelayCommand.cs" />
+    <Compile Include="ViewModels\DocumentInfoViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PlaylistViewModel.cs" />
+    <Compile Include="ViewModels\ProvidersViewModel.cs" />
+    <Compile Include="Views\DocumentInfoView.xaml.cs">
+      <DependentUpon>DocumentInfoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PlaylistView.xaml.cs">
       <DependentUpon>PlaylistView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProvidersView.xaml.cs">
+      <DependentUpon>ProvidersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUtility\FileSystemHelper.cs" />
+    <Compile Include="ViewUtility\Messager.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,7 +96,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\DocumentInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PlaylistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProvidersView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

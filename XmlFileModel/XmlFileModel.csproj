@@ -63,7 +63,7 @@
     <Compile Include="RottenTomatoesScore.cs" />
     <Compile Include="Series.cs" />
     <Compile Include="Utility\ValidationResult.cs" />
-    <Compile Include="Utility\XmlSchemaValidator.cs" />
+    <Compile Include="Utility\XMLSerializer.cs" />
     <Compile Include="Utility\XMLTransformer.cs" />
     <Compile Include="Utility\XMLValidator.cs" />
   </ItemGroup>

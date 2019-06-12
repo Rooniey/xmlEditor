@@ -6,6 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:vm="clr-namespace:GUI.ViewModels"
         xmlns:views="clr-namespace:GUI.Views"
+        xmlns:local="clr-namespace:GUI"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -13,29 +14,95 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
         DataContext="{StaticResource MainViewModel}"
-        Title="MainWindow" Height="450" Width="800">
+        Title="XML editor" MinHeight="1000" MinWidth="1580">
     <Window.Resources>
         <DataTemplate x:Name="playlistTemplate" DataType="{x:Type vm:PlaylistViewModel}">
             <views:PlaylistView/>
         </DataTemplate>
+        <DataTemplate x:Name="providersTemplate" DataType="{x:Type vm:ProvidersViewModel}">
+            <views:ProvidersView/>
+        </DataTemplate>
+        <DataTemplate x:Name="documentInfoTemplate" DataType="{x:Type vm:DocumentInfoViewModel}">
+            <views:DocumentInfoView/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="14*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        
-        <StackPanel
-            Margin="20 5 0 0"
-            Orientation="Horizontal">
-            <Button Command="{Binding ReadXml}" Content="Read XML"/>
-            <Button Command="{Binding Navigate}"  CommandParameter="PLAYLIST" Content="Playlist"/>
-        </StackPanel>
 
-        <ContentControl Grid.Row="1" Content="{Binding ChosenViewModel}" />
+        <Menu
+            IsMainMenu="True">
+            <MenuItem
+                Header="XML File">
+                <MenuItem
+                    Header="Open"
+                    Command="{Binding ReadXml}">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="File"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem
+                    Header="Save as.." 
+                    Command="{Binding WriteXml}">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentSave"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                
+                <MenuItem
+                    Header="Transform to">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="Arrow"/>
+                    </MenuItem.Icon>
+                    <MenuItem
+                        Header=".txt"
+                        Command="{Binding GenerateReport}"
+                        CommandParameter="TXT"/>
+                    <MenuItem
+                        Header=".svg"
+                        Command="{Binding GenerateReport}"
+                        CommandParameter="SVG"/>
+                </MenuItem>
+               
+            </MenuItem>
+            <MenuItem
+                Header="Show">
+                <MenuItem
+                    Header="Document info"
+                    Command="{Binding Navigate}"
+                    CommandParameter="DOCUMENT_INFO">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="InformationVariant" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Playlists"
+                    Command="{Binding Navigate}"
+                    CommandParameter="PLAYLIST">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="FormatListBulleted" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Header="Providers"
+                    Command="{Binding Navigate}"
+                    CommandParameter="PROVIDERS">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="CloudOutline" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+      
+        <ContentControl 
+            Content="{Binding ChosenViewModel}"
+            Margin="25 0 25 25"
+            Grid.Row="1"/>
         
     </Grid>
 </Window>

@@ -1,10 +1,9 @@
 ﻿using GUI.Base;
-using Microsoft.Win32;
+using GUI.ViewUtility;
 using System;
 using System.IO;
-using System.Windows.Input;
-using System.Xml.Serialization;
 using XmlFileModel;
+using XmlFileModel.Utility;
 
 namespace GUI.ViewModels
 {
@@ -12,7 +11,6 @@ namespace GUI.ViewModels
     {
 
         private object _chosenViewModel;
-
         public object ChosenViewModel
         {
             get => _chosenViewModel;
@@ -21,19 +19,27 @@ namespace GUI.ViewModels
 
         private Document _document;
 
-        public Document Document
-        {
-            get => _document;
-            private set => SetProperty(ref _document, value);
-        }
-
         public RelayCommand Navigate { get; }
         public RelayCommand ReadXml { get; }
+        public RelayCommand WriteXml { get; }
+        public RelayCommand GenerateReport { get; }
 
         public MainViewModel()
         {
-            Navigate = new RelayCommand((dest) => NavigateTo((string)dest), (_) => Document != null);
-            ReadXml = new RelayCommand((_) => ReadXmlFile());
+            Navigate = new RelayCommand(
+                (dest) => NavigateTo((string)dest), 
+                (_) => _document != null);
+
+            ReadXml = new RelayCommand(
+                (_) => ReadXmlFile());
+
+            WriteXml = new RelayCommand(
+                (_) => SaveXmlFile(),
+                (_) => _document != null);
+
+            GenerateReport = new RelayCommand(
+                (type) => GenerateSpecificTypeReport((string)type),
+                (_) => _document != null);
         }
 
         public void NavigateTo(string dest)
@@ -41,29 +47,49 @@ namespace GUI.ViewModels
             switch(dest)
             {
                 case "PLAYLIST":
-                    ChosenViewModel = new PlaylistViewModel(Document.Playlists);
+                    ChosenViewModel = new PlaylistViewModel(_document);
+                    break;
+                case "PROVIDERS":
+                    ChosenViewModel = new ProvidersViewModel(_document);
+                    break;
+                case "DOCUMENT_INFO":
+                    ChosenViewModel = new DocumentInfoViewModel(_document.Info);
                     break;
             }
         }
 
         public void ReadXmlFile()
         {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.DefaultExt = ".xml"; 
-            dlg.Filter = "xml (.xml)|*.xml";
-            bool? result = dlg.ShowDialog();
+            string xmlFilePath = FileSystemHelper.GetXmlFilePath();
+            if (string.IsNullOrEmpty(xmlFilePath) || !File.Exists(xmlFilePath)) return;
 
-            if (result == false) return;
-            string xmlFile = dlg.FileName;
-
-            XmlSerializer serializer = new XmlSerializer(typeof(Document));
-
-            using (StreamReader sr = new StreamReader(xmlFile))
+            try
             {
-                Document = (Document)serializer.Deserialize(sr);
+                //ValidationResult valRes = XMLValidator.Validate(xmlFilePath);
+
+                //if (!valRes.IsValid)
+                //{
+                //    Messager.DisplayValidationErrors(valRes.Errors);
+                //    return;
+                //}
+
+                _document = XMLSerializer.Deserialize(xmlFilePath);
+                NavigateTo("PLAYLIST");
+
+            } catch(Exception ex)
+            {
+                Messager.DisplayError(ex.Message);
             }
         }
 
+        public void SaveXmlFile()
+        {
+            Console.WriteLine("Saving to file");
+        }
 
+        public void GenerateSpecificTypeReport(string type)
+        {
+            Console.WriteLine($"Generating report with extension {type}");
+        }
     }
 }

@@ -3,11 +3,11 @@
 namespace GUI.Views
 {
     /// <summary>
-    /// Interaction logic for PlaylistView.xaml
+    /// Interaction logic for ProvidersView.xaml
     /// </summary>
-    public partial class PlaylistView : UserControl
+    public partial class ProvidersView : UserControl
     {
-        public PlaylistView()
+        public ProvidersView()
         {
             InitializeComponent();
         }

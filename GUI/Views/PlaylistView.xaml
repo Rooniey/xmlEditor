@@ -3,99 +3,159 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:GUI.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid
+        Margin="20 10 20 10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <DataGrid
-          Margin="0 8 0 0"
-          Grid.Column="0"
-          ItemsSource="{Binding Playlists}"
-          SelectedItem="{Binding ChosenPlaylist}"
-          CanUserSortColumns="True"
-          CanUserAddRows="False"
-          AutoGenerateColumns="False"
-          SelectionMode="Single"
-          materialDesign:DataGridAssist.CellPadding="13 8 8 8"
-          materialDesign:DataGridAssist.ColumnHeaderPadding="8">
-            <DataGrid.Columns>
-                <DataGridTextColumn
-                    Binding="{Binding Name}"
-                    Header="Name"
-                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
-                <DataGridTemplateColumn Header="Actions">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Button Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}},Path=DataContext.DeletePlaylist}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}" Content="Delete"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+        <StackPanel 
+                Orientation="Vertical"
+                Grid.Column="0"
+                Grid.Row="0">
+            <TextBlock Text="Playlists" HorizontalAlignment="Center" FontSize="20" Margin="0 0 0 20"/>
+            <DataGrid
+                  ItemsSource="{Binding Playlists}"
+                  SelectedItem="{Binding ChosenPlaylist}"
+                  CanUserSortColumns="True"
+                  CanUserAddRows="False"
+                  AutoGenerateColumns="False"
+                  SelectionMode="Single"
+                  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+                  materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Binding="{Binding Name}"
+                        Header="Name"
+                        EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <DataGridTemplateColumn Header="Actions">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}},Path=DataContext.DeletePlaylist}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}" Content="Delete"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
 
         <StackPanel
             Margin="50 10 50 10"
-            Grid.Column="2"
-               Orientation="Vertical">
+            Width="350"
+            HorizontalAlignment="Center"
+            Grid.Column="1"
+            Orientation="Vertical">
             <Label Margin="-5 0 0 20" HorizontalAlignment="Left" FontSize="20" Content="Create new playlist:"/>
-            <TextBox HorizontalAlignment="Left" Width="200" Text="{Binding NewName}" materialDesign:HintAssist.Hint="Playlist name"/>
-            <Button Margin="0 10 0 0" Width="75" HorizontalAlignment="Right" Content="Add" Command="{Binding AddNewPlaylist}"/>
+            <TextBox HorizontalAlignment="Left" Width="300" Text="{Binding NewName}" materialDesign:HintAssist.Hint="Playlist name"/>
+            <Button Margin="0 20 50 0"  Width="75" HorizontalAlignment="Right" Content="Add" Command="{Binding AddNewPlaylist}"/>
         </StackPanel>
 
-        <DataGrid
-          Margin="0 8 0 0"
-          Grid.Column="0"
-          Grid.Row="1"
-          ItemsSource="{Binding Series}"
-          CanUserSortColumns="True"
-          CanUserAddRows="False"
-          AutoGenerateColumns="False"
-          SelectionMode="Single"
-          materialDesign:DataGridAssist.CellPadding="13 8 8 8"
-          materialDesign:DataGridAssist.ColumnHeaderPadding="8">
-            <DataGrid.Columns>
-                <DataGridTextColumn
-                    Binding="{Binding Title}"
-                    Header="Name"
-                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
-                <DataGridTextColumn
-                    Binding="{Binding TotalNumberOfEpisodes}"
-                    Header="Nr of episodes"
-                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
-                <DataGridTextColumn
-                    Binding="{Binding FirstEpisodePremiere}"
-                    Header="Premiere"
-                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
-                <DataGridTextColumn
-                    Binding="{Binding RottenTomatoes.Score}"
-                    Header="RottenTomatoes"
-                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
-                <materialDesign:MaterialDataGridComboBoxColumn
-                    Header="Genre"
-                    SelectedValueBinding="{Binding Genre}"
-                    ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.GENRES}" />
-                <DataGridTemplateColumn Header="Actions">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Button Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}},Path=DataContext.DeleteSeriesFromPlaylist}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}" Content="Delete"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+
+        <StackPanel 
+                Margin="0 50 0 0"
+                Orientation="Vertical"
+                Grid.Column="0"
+                Grid.Row="1">
+            <TextBlock Text="{Binding ChosenPlaylist.Name}" HorizontalAlignment="Center" FontSize="20" Margin="0 0 0 20"/>
+            <DataGrid
+                  Grid.Column="0"
+                  Grid.Row="1"
+                  ItemsSource="{Binding Series}"
+                  CanUserSortColumns="True"
+                  CanUserAddRows="False"
+                  AutoGenerateColumns="False"
+                  SelectionMode="Single"
+                  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+                  materialDesign:DataGridAssist.ColumnHeaderPadding="8">        
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Binding="{Binding Title}"
+                        Header="Name"
+                        EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <materialDesign:MaterialDataGridComboBoxColumn
+                        Header="Genre"
+                        SelectedValueBinding="{Binding Genre}"
+                        ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.GENRES}" />
+                    <DataGridTextColumn
+                        Binding="{Binding TotalNumberOfEpisodes}"
+                        Header="Nr of episodes"
+                        EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <DataGridTextColumn
+                        Binding="{Binding FirstEpisodePremiere}"
+                        Header="Premiere"
+                        EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <DataGridTextColumn
+                        Binding="{Binding RottenTomatoes.Score}"
+                        Header="RottenTomatoes"
+                        EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <materialDesign:MaterialDataGridComboBoxColumn
+                        Header="Provider"
+                        SelectedValueBinding="{Binding Provider}"
+                        ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.Providers}" />
+
+
+                    <DataGridTemplateColumn Header="Actions">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}},Path=DataContext.DeleteSeriesFromPlaylist}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}" Content="Delete"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <Grid
+            Margin="25 50 25 0"
+            Grid.Row="1"
+            Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.ColumnSpan="2" FontSize="20" Text="Add new series to playlist:"/>
+            
+            <StackPanel
+                Grid.Column="0"
+                Grid.Row="1"
+                Orientation="Vertical">
+                <Label Content="Title" Margin="-5 0 0 -5"/>
+                <TextBox Text="{Binding Title}" materialDesign:HintAssist.Hint="Enter series title" Width="300" Margin="0 0 0 30" HorizontalAlignment="Left"/>
+                <Label Content="Nr of episodes" Margin="-5 0 0 -5"/>
+                <TextBox Text="{Binding NrOfEpisodes}" materialDesign:HintAssist.Hint="Enter nr of episodes" Width="300" Margin="0 0 0 30" HorizontalAlignment="Left"/>
+                <Label Content="Select genre" Margin="-5 0 0 -5"/>
+                <ComboBox HorizontalAlignment="Left" SelectedItem="{Binding Genre}" ItemsSource="{Binding GENRES}" Width="100" materialDesign:HintAssist.Hint="Genres"/>
+            </StackPanel>
+            <StackPanel
+                Grid.Column="1"
+                Grid.Row="1"
+                Orientation="Vertical">
+                <Label Content="Premiere" Margin="-5 0 0 -5"/>
+                <TextBox Text="{Binding Premiere}" materialDesign:HintAssist.Hint="Enter first episode premiere (yyyy-mm-dd)" Width="300" Margin="0 0 0 30" HorizontalAlignment="Left"/>
+                <Label Content="Rotten Tomatoes score" Margin="-5 0 0 -5"/>
+                <TextBox Text="{Binding RottenTomatoesScore}" materialDesign:HintAssist.Hint="Enter Rotten Tomatoes score" Width="300" Margin="0 0 0 30" HorizontalAlignment="Left"/>
+                <Label Content="Select provider" Margin="-5 0 0 -5"/>
+                <ComboBox HorizontalAlignment="Left" SelectedItem="{Binding Provider}" ItemsSource="{Binding Providers}" Width="100" materialDesign:HintAssist.Hint="Providers"/>
+                <Button Content="Add" HorizontalAlignment="Right" Margin="0 50 100 0" Width="75" Command="{Binding AddSeriesToPlaylist}"/>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </UserControl>

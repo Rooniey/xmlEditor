@@ -3,11 +3,11 @@
 namespace GUI.Views
 {
     /// <summary>
-    /// Interaction logic for PlaylistView.xaml
+    /// Interaction logic for DocumentInfoView.xaml
     /// </summary>
-    public partial class PlaylistView : UserControl
+    public partial class DocumentInfoView : UserControl
     {
-        public PlaylistView()
+        public DocumentInfoView()
         {
             InitializeComponent();
         }

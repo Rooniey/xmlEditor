@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="GUI.Views.DocumentInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel 
+            Orientation="Vertical"
+            Width="400"
+            HorizontalAlignment="Center">
+            <TextBlock FontSize="20" HorizontalAlignment="Center" Text="{Binding CurrentTitle}"/>
+            
+            
+            <Label Content="Document title" Margin="-5 20 0 -5"/>
+            <TextBox Text="{Binding Title}" materialDesign:HintAssist.Hint="Enter document new title"/>
+            <Button Content="Save title" Command="{Binding SaveTitle}" Margin="0 20 0 0" HorizontalAlignment="Right"/>
+
+
+            <TextBlock Text="Document's authors" FontSize="20" HorizontalAlignment="Center" Margin="0 50 0 0" />
+            <DataGrid
+                Height="250"
+                Width="400"
+                Margin="0 20 0 0"
+                ItemsSource="{Binding Authors}"
+                CanUserSortColumns="True"
+                CanUserAddRows="False"
+                AutoGenerateColumns="False"
+                SelectionMode="Single"
+                materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+                materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                    Binding="{Binding FirstName}"
+                    Header="Name"
+                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <DataGridTextColumn
+                    Binding="{Binding LastName}"
+                    Header="Name"
+                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <DataGridTextColumn
+                    Binding="{Binding Index}"
+                    Header="Name"
+                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
+                    <DataGridTemplateColumn Header="Actions">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}},Path=DataContext.DeleteAuthor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}" Content="Delete"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <TextBlock Text="New author" FontSize="20" HorizontalAlignment="Center" Margin="0 50 0 20"/>
+            <Label Content="FirstName" Margin="-5 0 0 -5"/>
+            <TextBox Text="{Binding FirstName}" materialDesign:HintAssist.Hint="Enter firstname" Width="400" Margin="0 0 0 30" HorizontalAlignment="Left"/>
+            <Label Content="LastName" Margin="-5 0 0 -5"/>
+            <TextBox Text="{Binding LastName}" materialDesign:HintAssist.Hint="Enter lastname" Width="400" Margin="0 0 0 30" HorizontalAlignment="Left"/>
+            <Label Content="Index" Margin="-5 0 0 -5"/>
+            <TextBox Text="{Binding Index}" materialDesign:HintAssist.Hint="Enter index" Width="400" Margin="0 0 0 30" HorizontalAlignment="Left"/>
+
+            <Button Content="Add author" Command="{Binding AddAuthor}" Margin="0 20 0 0" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
