@@ -2,7 +2,7 @@
 
 namespace XmlFileModel
 {
-    [XmlRoot(ElementName = "seriesPlaylists")]
+    [XmlRoot(ElementName = "seriesPlaylists", Namespace = "http://tempuri.org/SeriesPlaylist")]
     public class Document
     {
         [XmlElement(ElementName = "documentInfo")]

@@ -65,13 +65,13 @@ namespace GUI.ViewModels
 
             try
             {
-                //ValidationResult valRes = XMLValidator.Validate(xmlFilePath);
+                ValidationResult valRes = XMLValidator.Validate(xmlFilePath);
 
-                //if (!valRes.IsValid)
-                //{
-                //    Messager.DisplayValidationErrors(valRes.Errors);
-                //    return;
-                //}
+                if (!valRes.IsValid)
+                {
+                    Messager.DisplayValidationErrors(valRes.Errors);
+                    return;
+                }
 
                 _document = XMLSerializer.Deserialize(xmlFilePath);
                 NavigateTo("PLAYLIST");

@@ -113,6 +113,7 @@ namespace GUI.ViewModels
         private void OnChosenProviderChanged(Provider value)
         {
             Payments.Clear();
+            if (value == null) return;
             foreach(var payment in value.MonthlyPayment.Collection)
             {
                 Payments.Add(payment);

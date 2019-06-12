@@ -159,6 +159,7 @@ namespace GUI.ViewModels
         public void OnChangeSelectedPlaylist(Playlist playlist)
         {
             Series.Clear();
+            if (playlist == null) return;
             foreach (var series in playlist.Series.Collection)
             {
                 Series.Add(series);

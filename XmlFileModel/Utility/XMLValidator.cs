@@ -42,7 +42,7 @@ namespace XmlFileModel.Utility
 
             // Parse the file. 
             while (reader.Read()) ;
-
+            
 
             return new ValidationResult(errors.Count == 0, errors);
         }
